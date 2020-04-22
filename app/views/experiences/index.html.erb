@@ -1,0 +1,22 @@
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
+<h1>Amount Rating: <%=@amount_rating%></h1>
+<div>
+  <%= button_to "Add", new_experience_path, :method => :get %>
+</div>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Rating</th>
+  </tr>
+  <% @experiences.each do |experience| %>
+    <tr>
+      <td><%= experience.name %></td>
+      <td><%= experience.rating %></td>
+    </tr>
+  <% end %>
+</table>

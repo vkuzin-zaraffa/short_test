@@ -1,0 +1,17 @@
+<%= form_with(model: experience, local: true) do |form| %>
+  <div>
+    <label>Name</label>
+    <div>
+      <%= form.text_field :name %>
+    </div>
+  </div>
+  <div>
+    <label>Rating</label>
+    <div>
+      <%= form.number_field :rating, step: 0.01, max: 5 %>
+    </div>
+  </div>
+  <div>
+    <%= form.submit data: {confirm: 'Are you sure?'} %>
+  </div>
+<% end %>

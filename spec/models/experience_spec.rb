@@ -27,7 +27,7 @@ RSpec.describe Experience, type: :model do
 
     it 'must be calculate amount_rating' do
       amount_rating = ((second_experience.rating + experience.rating) / 2).round(2)
-      expect(Experience.amount_rating).to eq(amount_rating)
+      expect(Experience.amount_rating.round(2)).to eq(amount_rating)
     end
   end
 end
